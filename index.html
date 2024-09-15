@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFC Alloy Calculator</title>
+    <script src="calc.js"></script>
+</head>
+<body>
+    <label for="alloys">Alloy:</label>
+    <select name="alloys" id="alloys" onchange="reloadSliders()">
+    <option value="bronze">Bronze</option>
+    <option value="bismuth_bronze">Bismuth Bronze</option>
+    <option value="black_bronze">Black Bronze</option>
+    <option value="brass">Brass</option>
+    <option value="rose_gold">Rose Gold</option>
+    <option value="sterling_silver">Sterling Silver</option>
+    </select> 
+
+    <div class="slidecontainer">
+        <label id="label_1">Copper</label>
+        <input type="range" min="88" max="92" value="90" class="slider" id="slider_1" oninput="sliderMoved()">
+        <label id="percent_1">%</label>
+        <br>
+        <label id="label_2">Tin</label>
+        <input type="range" min="8" max="12" value="10" class="slider" id="slider_2" oninput="sliderMoved()">
+        <label id="percent_2">%</label>
+        <br>
+        <label id="label_3">Unused</label>
+        <input type="range" min="1" max="100" value="50" class="slider" id="slider_3" oninput="sliderMoved()">
+        <label id="percent_3">%</label>
+        <br>
+        <label id="total">Total: 100%</label>
+    </div>
+</select>
+</body>
+</html>
